@@ -38,5 +38,3 @@ $ npm run dev
 # Generate static project
 $ npm run generate
 ```
-
-## Technical Stack
