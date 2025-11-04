@@ -62,7 +62,7 @@ const CampForm = ({
                 return
             }
 
-            const response = await fetch('http://localhost:3000/api/room/add', {
+            const response = await fetch('/api/room/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
