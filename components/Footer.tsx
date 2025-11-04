@@ -9,9 +9,8 @@ const Footer = () => {
             width: '85%',
             height: '1.5px',
             backgroundColor: '#c7c7c7',
-            marginTop: '5px',
-            display: 'flex',
-            justifySelf: 'center'
+            margin: '5px auto 0 auto',
+            display: 'flex'
         }}>
         </div>
     </div>
