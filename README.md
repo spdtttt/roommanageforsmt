@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ระบบจัดการห้องพักสำหรับนักเรียน โรงเรียนเมืองสุราษฎร์ธานี
 
-## Getting Started
 
-First, run the development server:
+### ระบบจัดการห้องพักสำหรับนักเรียน จัดทำขึ้นเพื่อสร้างความสะดวกสบาย เนื่องจากห้องเรียนพิเศษโรงเรียนเมืองสุราษฎร์ธานี มีค่ายศึกษาแหล่งเรียนรู้นอกห้องเรียนในทุกปี และมีการจัดการห้องพักสำหรับนักเรียน ผมจึงสร้างระบบนี้ขึ้นเพื่อความสะดวก เรียบง่ายให้กับนักเรียนในการจัดการสมาชิกห้องพัก
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## เทคโนโลยีที่ใช้
+<p align="center" style="display: flex; justify-content: center; gap: 50px;">
+<img src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png" width="200">
+<img src="https://avatars.githubusercontent.com/u/17219288?s=200&v=4" width="200">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" width="200">
+<img src="https://i0.wp.com/thefrontendarchitect.com/wp-content/uploads/2025/08/superbase.webp?fit=1100%2C825&ssl=1" width="200">
+</p>
+
+### NextJS - Framework ของ React สำหรับสร้าง Website ที่รวดเร็วและสะดวก เป็นการทำงานประมวลผลบนฝั่ง Server
+### Prisma - เครื่องมือเชื่อมต่อเข้าถึงฐานข้อมูลด้วย API ที่ปลอดภัย
+### PostgreSQL - เครื่องมือสำหรับฐานข้อมูลหรือจัดเก็บข้อมูลบน Website อย่างมั่นคงและปลอดภัย
+### Supabase - Backend-as-a-Service, API แบบ Realtime, Host Database(PostgreSQL)
+
+
+## Features
+### - แบ่งแยกเป็นสองระบบ ได้แก่ระบบสำหรับนักเรียน และสำหรับคุณครู ระบบสำหรับนักเรียนสามารถดูรายการค่ายทั้งหมดของแต่ละห้องได้ (4/9,5/9,6/9) ระบบสำหรับคุณครูสามารถสร้างรายการค่าย รวมถึงลบรายการห้องพักที่นักเรียนบันทึกมาแล้วได้
+### หน้าแรก - เป็นหน้าแสดงรายการค่ายทั้งหมด พร้อมรายละเอียด ได้แก่ ห้อง, จำนวนคนต่อห้อง และวันที่จัดค่าย มีปุ่มคลิกเพื่อเข้าไปเพิ่มรายชื่อสมาชิกที่จะพักด้วยได้
+### หน้าบันทึกสมาชิกห้องพักของแต่ละค่าย - แสดงผลรายละเอียดค่าย และให้เลือกสมาชิกที่จะพักร่วมด้วยในค่าย(จำนวนคนตามจำนวนคนต่อห้องของรายละเอียดค่าย) โดยเลือกได้เฉพาะผู้ที่อยู่ในห้องเรียนที่ค่ายจะจัด และต้องเป็นเพศเดียวกันเท่านั้น! กดปุ่มบันทึกเพื่อบันทึกรายการสมาชิกห้องพัก
+### หน้าติดต่อ,แจ้งปัญหา - แสดงผลช่องทางการติดต่อของผู้พัฒนา เพื่อติดต่อส่วนตัวหรือแจ้งปัญหาที่เกี่ยวข้องกับระบบ Website
+
+
+## Build Setup
+``` bash
+# install dependencies
+$ npm install
+
+
+# รันบนเซิร์ฟเวอร์ localhost:3000
+$ npm run dev
+
+
+# Generate static project
+$ npm run generate
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technical Stack
