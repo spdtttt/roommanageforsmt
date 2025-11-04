@@ -1,4 +1,4 @@
-import {prisma} from "@/prisma";
+import { prisma } from "@/prisma";
 
 export async function getAvailableStudents(camp_id: number) {
     { /* หารายการค่ายที่ตรงกับ Camp ID */ }

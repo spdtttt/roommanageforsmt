@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { BeatLoader } from "react-spinners";
 
 async function CampData({ id }: { id: number }) {
-  const response = await fetch(`http://localhost:3000/api/camps/${id}`, {
+  const response = await fetch(`/api/camps/${id}`, {
     cache: 'no-store',
   });
   const campInfo = await response.json();

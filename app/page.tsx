@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { BeatLoader } from "react-spinners";
 
 async function CampData() {
-  const response = await fetch('http://localhost:3000/api/camps', {
+  const response = await fetch('/api/camps', {
     cache: 'no-store'
   });
   const camps = await response.json();
