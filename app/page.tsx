@@ -25,7 +25,7 @@ const page = () => {
         width: '85%',
         height: '1.5px',
         backgroundColor: '#c7c7c7',
-        marginBottom: '50px'
+        marginBottom: '30px'
       }}></div>
 
       <Suspense fallback={
