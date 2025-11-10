@@ -34,7 +34,7 @@ const CampForm = ({
             const hasDuplicate = new Set(members).size !== members.length
             console.log(hasDuplicate);
 
-            if (members.length === 0) {
+            if (members.length !== campInfo.max) {
                 alert('กรุณาเลือกสมาชิกให้ครบ');
                 setIsSubmitting(false);
                 return
