@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="mb-5 mt-5">
+    <div className="mb-5 mt-20">
         <div className="text-center text-gray-400 text-lg">
             <p>โรงเรียนเมืองสุราษฎร์ธานี</p>
         </div> 
