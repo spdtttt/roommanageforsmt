@@ -1,5 +1,6 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Toaster, toast } from 'sonner'
 
 const CampForm = ({
     campInfo,
@@ -15,7 +16,9 @@ const CampForm = ({
         Array(campInfo.max).fill('')
     );
     const [isSubmitting, setIsSubmitting] = useState(false);
-    // const [showAlert, setShowAlert] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
 
     const handleSelectChange = (index: number, value: string) => {
         const newMembers = [...selectedMembers];
@@ -75,7 +78,15 @@ const CampForm = ({
 
             if (response.ok) {
                 setSelectedMembers(Array(campInfo.max).fill(''));
-                window.location.reload();
+                // setTitle('บันทึกรายการห้องเรียบร้อย!');
+                // setDescription('ข้อมูลถูกบันทึกเรียบร้อยแล้ว');
+                // setIsVisible(true);
+                toast.success('บันทึกรายการห้องเรียบร้อย!')
+
+                setTimeout(() => {
+                    setIsVisible(false);
+                    window.location.reload();
+                }, 3000);
             } else {
                 alert('เกิดข้อผิดพลาดในการบันทึกข้อมูล');
             }
@@ -90,6 +101,15 @@ const CampForm = ({
     return (
         <div className="px-4 sm:px-8 md:px-15">
             {/* Header */}
+            <Toaster duration={2500} className='w-500 h-500' richColors position='top-right' expand={true} 
+                toastOptions={{
+                    style: {
+                        padding: '25px 25px',
+                        fontSize: '20px'
+                    }
+                }}
+            />
+            
             <div className="flex justify-center mt-8 mb-10">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl text-center" style={{
                     fontFamily: 'Mitr, sans-serif',
